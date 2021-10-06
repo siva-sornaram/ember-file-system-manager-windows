@@ -1,0 +1,18 @@
+<div class="subtitle" style="position: absolute; top: 0; right: 0; margin-top: 20px; margin-right: 100px">
+    <strong>Welcome {{this.username}}</strong>
+</div>
+
+<button style="position: absolute; top: 0; right: 0; margin-top: 20px; margin-right: 20px" type="submit" {{on 'click' this.invalidate }} >Logout</button>
+
+<LinkTo @route = "container.home-page">Home</LinkTo>
+
+{{#if (is-mgmt this.roleId)}}
+    <LinkTo @route = "container.mgmt-page">Management</LinkTo>
+{{/if}}
+
+{{#if (is-admin this.roleId) }}
+    <LinkTo @route = "container.mgmt-page">Management</LinkTo>
+    <LinkTo @route = "container.admin-page">Administrator</LinkTo>
+{{/if}}
+
+{{outlet}}

@@ -1,0 +1,33 @@
+{{page-title "LoginPage"}}
+
+<div class="container" >
+
+    <h1>Please Login</h1>
+
+    <table class = "center" >
+        <tr>
+            <td>
+                <label>Username : </label>
+            </td>
+            <td>
+                {{ input type = "text" id = "username" value = this.username }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password : </label>
+            </td>
+            <td>
+                {{ input type = "password" id = "password" value = this.password }}
+            </td>
+        </tr>
+    </table>
+    {{!-- <button class = "button" style="margin: auto; display:block;" type="button">Login</button> --}}
+    <button type="submit" {{on 'click' this.validate_user }} class="button">Login</button>
+
+    {{#if this.err}}
+        <strong><p style="color: red;margin-left: 20px;"> {{this.errormsg}} </p></strong>
+    {{/if}}
+</div>
+
+{{outlet}}

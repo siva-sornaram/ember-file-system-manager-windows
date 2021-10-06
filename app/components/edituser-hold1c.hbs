@@ -1,0 +1,35 @@
+<table class = "center" >
+        <tr>
+            <td>
+                <label>UserId : </label>
+            </td>
+            <td>
+                {{input type = "number" id = "userid" value=this.userid}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Username : </label>
+            </td>
+            <td>
+                {{ input type = "text" id = "username" value = this.username }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Role : </label>
+            </td>
+            <td>
+                <input class=rolechkbox type="checkbox" id="mgmt" name="mgmt">
+                <label for="mgmt">Management</label>
+                <input class=rolechkbox type="checkbox" id="admin" name="admin">
+                <label for="admin">Administrator</label>
+            </td>
+        </tr>
+    </table>
+    {{!-- <button class = "button" style="margin: auto; display:block;" type="button">Login</button> --}}
+    <button type="submit" {{on 'click' this.update_user }} class="button">Update User</button>
+    <strong><p id = "message" style="margin-left: 20px;">  </p></strong>
+
+        
+    

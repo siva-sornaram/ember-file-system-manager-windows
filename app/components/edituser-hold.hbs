@@ -1,0 +1,17 @@
+<h2>Users List</h2>
+
+<table style="border: 1px solid; margin-left: 100px;">
+  <tr>
+    <th style="padding: 5px 10px 5px 10px">UserId</th>
+    <th style="padding: 5px 10px 5px 10px">UserName</th>
+    <th style="padding: 5px 10px 5px 10px">Role</th>
+  </tr>
+  {{#each this.users as |user|}}
+        <tr>
+            <td style="padding: 5px 10px 5px 10px">{{user.userId}}</td>
+            <td style="padding: 5px 10px 5px 10px">{{user.userName}}</td>
+            <td style="padding: 5px 10px 5px 10px">{{user.role}}</td>
+            <td style="padding: 5px 10px 5px 10px"><LinkTo @route = "container.admin-page.edituser.edituser-hold.edituser-hold1" userId = this.user.userId>Edit</LinkTo></td>
+        </tr>
+  {{/each}}
+</table>
