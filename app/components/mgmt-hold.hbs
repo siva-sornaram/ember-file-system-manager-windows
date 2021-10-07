@@ -11,9 +11,14 @@
             <td style="padding: 5px 10px 5px 10px">{{file.id}}</td>
             <td style="padding: 5px 10px 5px 10px">{{file.fname}}</td>
             <td style="padding: 5px 10px 5px 10px">
-                {{#each file.permissions as |permission|}}
-                <span style="padding-left: 2px;">{{permission}}</span>
-                {{/each}}
+              <input type="checkbox" name="FC" id="FC" checked={{is-fc file.permissionval}} style="padding-left: 5px;">
+              <label for="FC">Full Controll</label>
+              <input type="checkbox" name="E" id="E" checked={{is-execute file.permissionval}} style="padding-left: 10px;">
+              <label for="E">Read and Execute</label>
+              <input type="checkbox" name="R" id="R" checked={{is-read file.permissionval}} style="padding-left: 10px;">
+              <label for="R">Read</label>
+              <input type="checkbox" name="W" id="W" checked={{is-write file.permissionval}} style="padding-left: 10px;">
+              <label for="W">Write</label>
             </td>
         </tr>
   {{/each}}
