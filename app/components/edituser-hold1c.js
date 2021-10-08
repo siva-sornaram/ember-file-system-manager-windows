@@ -30,7 +30,7 @@ export default class EdituserHold1cComponent extends Component {
 
     var result = $.ajax({
       type: 'PUT',
-      url: '/role-based-login-backend/webapi/users/updateuser',
+      url: 'http://localhost:8080/role-based-login-backend/webapi/users/updateuser',
       contentType: 'application/json',
       data: JSON.stringify(userdata),
       global: false,

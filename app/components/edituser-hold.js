@@ -10,7 +10,7 @@ export default class EdituserHoldComponent extends Component {
 
     var result = $.ajax({
       type: 'GET',
-      url: '/role-based-login-backend/webapi/users',
+      url: 'http://localhost:8080/role-based-login-backend/webapi/users',
       contentType: 'application/json',
       global: false,
       async: false,

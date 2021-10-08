@@ -33,7 +33,7 @@ export default class AdduserHoldComponent extends Component {
 
     var result = $.ajax({
       type: 'POST',
-      url: '/role-based-login-backend/webapi/users/createuser',
+      url: 'http://localhost:8080/role-based-login-backend/webapi/users/createuser',
       contentType: 'application/json',
       data: JSON.stringify(userdata),
       global: false,
