@@ -1,0 +1,15 @@
+<div class="container" >
+
+    <table class = "center" >
+        <tr>
+            <td>
+                <label>File of Folder Path : </label>
+            </td>
+            <td>
+                {{ input type = "text" id = "filePath" value = this.filePath }}
+            </td>
+        </tr>
+    </table>
+    <button type="submit" {{on 'click' this.getfiles }} class="button">Get Files</button>
+
+</div>

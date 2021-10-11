@@ -19,6 +19,7 @@ Router.map(function () {
         });
       });
     });
+    this.route('mgmt-getfiles', { path: '/getfiles'});
   });
   this.route('not-found', { path: '/*path' });
 });

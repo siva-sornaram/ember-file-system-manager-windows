@@ -1,5 +1,7 @@
 <h2>Files and Folders</h2>
 
+<span>Current Path : </span><span>"{{this.filepathtitle}}"</span><br><br>
+
 <table style="border: 1px solid; margin-left: 100px;">
   <tr>
     <th style="padding: 5px 10px 5px 10px">Sl.No</th>
@@ -10,7 +12,7 @@
         <tr id="{{file.id}}">
             <td style="padding: 5px 10px 5px 10px">{{file.id}}</td>
             <td style="padding: 5px 10px 5px 10px" id="fname-{{file.id}}">{{file.fname}}</td>
-            <td style="padding: 5px 10px 5px 10px">
+            <td style="padding: 5px 10px 5px 10px" id="msg-parent-{{file.id}}">
               <input type="checkbox" name="FC" value="7" class="chkper-{{file.id}}" checked={{is-fc file.permissionval}} style="padding-left: 5px;" onchange={{fn this.update_permission file.id}}>
               <label for="FC">Full Controll</label>
               <input type="checkbox" name="E" value="6" class="chkper-{{file.id}}" checked={{is-execute file.permissionval}} style="padding-left: 10px;" onchange={{fn this.update_permission file.id}}>
@@ -20,6 +22,7 @@
               <input type="checkbox" name="W" value="1" class="chkper-{{file.id}}" checked={{is-write file.permissionval}} style="padding-left: 10px;" onchange={{fn this.update_permission file.id}}>
               <label for="W">Write</label>
             </td>
+            <td><button type="submit" name="save-btn" class="save-btn-{{file.id}}" style="display: none;" {{on "click" (fn this.save_permission file.id)}} >Save Permission</button></td>
         </tr>
   {{/each}}
 </table>
