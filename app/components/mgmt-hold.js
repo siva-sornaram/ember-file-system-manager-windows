@@ -40,6 +40,7 @@ export default class MgmtHoldComponent extends Component {
     }).responseText;
 
     this.files = JSON.parse(result);
+    console.log(this.files);
   }
 
   @action

@@ -13,9 +13,9 @@
             <td style="padding: 5px 10px 5px 10px">{{file.id}}</td>
             <td style="padding: 5px 10px 5px 10px" id="fname-{{file.id}}">{{file.fname}}</td>
             <td style="padding: 5px 10px 5px 10px" id="msg-parent-{{file.id}}">
-              <input type="checkbox" name="FC" value="7" class="chkper-{{file.id}}" checked={{is-fc file.permissionval}} style="padding-left: 5px;" onchange={{fn this.update_permission file.id}}>
+              <input type="checkbox" name="FC" value="8" class="chkper-{{file.id}}" checked={{is-fc file.permissionval}} style="padding-left: 5px;" onchange={{fn this.update_permission file.id}}>
               <label for="FC">Full Controll</label>
-              <input type="checkbox" name="E" value="6" class="chkper-{{file.id}}" checked={{is-execute file.permissionval}} style="padding-left: 10px;" onchange={{fn this.update_permission file.id}}>
+              <input type="checkbox" name="E" value="4" class="chkper-{{file.id}}" checked={{is-execute file.permissionval}} style="padding-left: 10px;" onchange={{fn this.update_permission file.id}}>
               <label for="E">Read and Execute</label>
               <input type="checkbox" name="R" value="2" class="chkper-{{file.id}}" checked={{is-read file.permissionval}} style="padding-left: 10px;" onchange={{fn this.update_permission file.id}}>
               <label for="R">Read</label>
