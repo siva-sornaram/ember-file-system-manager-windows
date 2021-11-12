@@ -97,9 +97,9 @@ export default class MgmtHoldComponent extends Component {
     var result1 = JSON.parse(result);
 
     if(result1 == true) {
-      $('<span style="color: green;">Saved Successfully</span>').appendTo('#msg-parent-'+id);
+      $('.msg-' + id).text('Saved Successfully').css({display : "block", color: "green"});
     } else {
-      $('<span style="color: red;">Changes not done</span>').appendTo('#msg-parent-'+id);
+      $('.msg-' + id).text('Changes not done').css({display : "block", color: "red"});
     }
   }
 }

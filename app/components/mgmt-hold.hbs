@@ -23,6 +23,7 @@
               <label for="W">Write</label>
             </td>
             <td><button type="submit" name="save-btn" class="save-btn-{{file.id}}" style="display: none;" {{on "click" (fn this.save_permission file.id)}} >Save Permission</button></td>
+            <td><span style="display: none;" class="msg-{{file.id}}"></span></td>
         </tr>
   {{/each}}
 </table>
