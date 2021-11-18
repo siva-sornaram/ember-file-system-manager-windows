@@ -7,7 +7,7 @@ import cookies from 'ember-cli-js-cookie';
 export default class MgmtHoldComponent extends Component {
   @tracked files;
 
-  filepathtitle = cookies.get('filepath');
+  filepathtitle = "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\Users\\" + cookies.get('username');
 
   File = {
     id: 0,
